@@ -7,16 +7,16 @@
  */
 int main(void)
 {
-		char *name = "abakkar";
-	_printf("Aissam %s", name);
-	_putchar('\n');
-	_printf("Aissam abakka%c", 'r');
-	_putchar('\n');
-	_printf("this is %%");
-	_putchar('\n');
-	_printf("%d", 24);/* by youssef */
-	_putchar('\n');
-	_printf("%i", -200);
-	_putchar('\n');
-	return (0);
+                char *name = "abakkar";/* by Aissam */
+        _printf("Aissam %s", name);
+        _putchar('\n');
+        _printf("Aissam abakka%c", 'r');
+        _putchar('\n');
+        _printf("this is %%");
+        _putchar('\n');
+        _printf("%d", 24);/* by youssef */
+        _putchar('\n');
+        _printf("%i", -200);
+        _putchar('\n');
+        return (0);
 }
