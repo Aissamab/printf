@@ -7,7 +7,7 @@
 #include <string.h>
 
 int _putchar(char c);
-int printf_spring(char *stm);
+int print_string(char *stm);
 
 int _printf(const char *format, ...);
 

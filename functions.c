@@ -10,13 +10,13 @@ int print_string(char *stm)
 
 	if (stm == NULL)
 	{
-		print_string("(null)")
+		print_string("(null)");
 		return (6);
 	}
 
 	while (stm[len])
 	{
-		_putchar(stm[len])
+		_putchar(stm[len]);
 		len++;
 	}
 
