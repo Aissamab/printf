@@ -7,8 +7,7 @@
  */
 int main(void)
 {
-        char *name = "abakkar";
-
+		char *name = "abakkar";
 	_printf("Aissam %s", name);
 	_putchar('\n');
 	_printf("Aissam abakka%c", 'r');
