@@ -3,14 +3,15 @@
 int _printf(const char *format, ...);
 
 /**
- * _printf - Printf function
- * @format: format.
- * Return: Printed chars.
- */
+* _printf - Printf function
+* @format: format.
+* Return: Printed chars.
+*/
 
 int _printf(const char *format, ...)
 {
 	int i = 0;
+
 	va_list list;
 
 	if (format == NULL)
@@ -37,6 +38,12 @@ int _printf(const char *format, ...)
 
 			else if (*format == 's')
 				i += print_string(va_arg(list, char*));
+			else if (*format == 'd' || *format == 'i')/* by youssef */
+			{
+				int num = va_arg(list, int);
+
+				i += print_int(num);
+			}
 			else if (*format == '%')
 			{
 				write(1, format, 1);
