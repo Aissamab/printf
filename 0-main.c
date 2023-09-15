@@ -2,15 +2,15 @@
 
 int main(void)
 {
-	char *name = "abakkar";
+        char *name = "abakkar";
 
-	_printf("Aissam %s", name);
-	_putchar('\n');
-	_printf("Aissam abakka%c", 'r');
-	_putchar('\n');
-	_printf("this is %%");
-	
-	_putchar('\n');
+        _printf("Aissam %s", name);
+        _putchar('\n');
+        _printf("Aissam abakka%c", 'r');
+        _putchar('\n');
+        _printf("this is %%");
 
-	return (0);
+        _putchar('\n');
+
+        return (0);
 }
