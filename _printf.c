@@ -38,20 +38,26 @@ int _printf(const char *format, ...)
 
 			else if (*format == 's')
 				i += print_string(va_arg(list, char*));
+
 			else if (*format == 'd' || *format == 'i')/* by youssef */
 			{
 				int num = va_arg(list, int);
 
 				i += print_int(num);
 			}
+
 			else if (*format == '%')
 			{
 				write(1, format, 1);
 				i++;
 		}
+
 		}
+
 		format++;
 	}
+
 	va_end(list);
+
 	return (i);
 }
