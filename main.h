@@ -5,6 +5,8 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <string.h>
+#include <limits.h>
+
 
 /*prototype included*/
 int _putchar(char c);
