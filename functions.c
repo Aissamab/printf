@@ -14,7 +14,7 @@ int print_string(char *stm)
 		return (6);
 	}
 
-	while (stm[len] != '\0')
+	while (stm[len])
 	{
 		_putchar(stm[len]);
 		len++;
