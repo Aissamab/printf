@@ -10,12 +10,14 @@ int print_string(char *stm)
 
 	if (stm == NULL)
 	{
-		while ("(null)")
-		{
-			_putchar("(null)");
-			len++;
-		}
-		return (6);
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+		len += 6;
+		return (len);
 	}
 
 	while (stm[len])
@@ -40,6 +42,7 @@ int print_int(int num)
 	if (num < 0)
 	{
 		_putchar('-');
+		count++;
 		num = -num;
 	}
 
@@ -48,5 +51,6 @@ int print_int(int num)
 		count += print_int(num / 10);
 	}
 		_putchar(num % 10 + '0');
-	return (count + 1);
+		count++;
+	return (count);
 }

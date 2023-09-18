@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 	{
 		if (*format != '%')
 		{
-			write(1, format, 1);
-				i++;
+			_putchar(*format);
+			i++;
 		}
 		else
 		{
@@ -34,30 +34,32 @@ int _printf(const char *format, ...)
 				break;
 
 			if (*format == 'c')
-				i += _putchar(va_arg(list, int));
+			{
+				char c = (char)va_arg(list, int);
 
+				_putchar(c);
+				i++;
+			}
 			else if (*format == 's')
-				i += print_string(va_arg(list, char*));
+			{
+				char *str = va_arg(list, char *);
 
-			else if (*format == 'd' || *format == 'i')/* by youssef */
+				i += print_string(str);
+			}
+			else if (*format == '%')
+			{
+				_putchar('%');
+				i++;
+			}
+			else if (*format == 'd' || *format == 'i')
 			{
 				int num = va_arg(list, int);
 
 				i += print_int(num);
 			}
-
-			else if (*format == '%')
-			{
-				_putchar('%');
-				i++;
 		}
-
-		}
-
 		format++;
 	}
-
 	va_end(list);
-
 	return (i);
 }
