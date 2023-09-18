@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _printf(const char *format, ...);
 
 /**
 * _printf - Printf function
@@ -47,7 +48,7 @@ int _printf(const char *format, ...)
 
 			else if (*format == '%')
 			{
-				write(1, format, 1);
+				_putchar('%');
 				i++;
 		}
 
