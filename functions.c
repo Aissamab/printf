@@ -10,7 +10,11 @@ int print_string(char *stm)
 
 	if (stm == NULL)
 	{
-		print_string("(null)");
+		while ("(null)"[len])
+		{
+			_putchar("(null)"[len]);
+			len++;
+		}
 		return (6);
 	}
 
