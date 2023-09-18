@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(list, format);
 
 	while (*format)
@@ -29,26 +28,20 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-
 			if (*format == '\0')
 				break;
-
 			if (*format == 'c')
 				i += _putchar(va_arg(list, int));
-
 			else if (*format == 's')
 				i += print_string(va_arg(list, char*));
 			else if (*format == 'd' || *format == 'i')/* by youssef */
+				i += print_int(va_arg(list, int));
+			else
 			{
-				int num = va_arg(list, int);
-
-				i += print_int(num);
+				/*Print the unknown specifier*/
+				write(1, format - 1, 2);
+				i += 2;
 			}
-			else if (*format == '%')
-			{
-				write(1, format, 1);
-				i++;
-		}
 		}
 		format++;
 	}

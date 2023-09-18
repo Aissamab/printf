@@ -15,7 +15,4 @@ int _printf(const char *format, ...);
 int print_int(int num);
 
 
-
-
-
 #endif
