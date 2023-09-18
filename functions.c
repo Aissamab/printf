@@ -10,15 +10,15 @@ int print_string(char *stm)
 
 	if (stm == NULL)
 	{
-		while ("(null)"[len])
+		while ("(null)")
 		{
-			_putchar("(null)"[len]);
+			_putchar("(null)");
 			len++;
 		}
 		return (6);
 	}
 
-	while (stm[len] != '\0')
+	while (stm[len])
 	{
 		_putchar(stm[len]);
 		len++;
