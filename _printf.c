@@ -1,6 +1,5 @@
 #include "main.h"
 
-int _printf(const char *format, ...);
 
 /**
 * _printf - Printf function
