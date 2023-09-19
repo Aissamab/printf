@@ -62,13 +62,13 @@ int print_int(int num)
 int print_bin(int num)
 {
 	int binNum[32];
-        int i = 0;
-        int j;
+	int i = 0;
+	int j;
 
 	if (num == 0)
 	{
 		printf("0");
-		return(0);
+		return (0);
 	}
 
 	for ( ; num > 0; )
