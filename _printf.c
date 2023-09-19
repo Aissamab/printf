@@ -57,6 +57,13 @@ int _printf(const char *format, ...)
 
 				i += print_int(num);
 			}
+			else if (*format == 'b')
+			{
+				int nbr = va_arg(list, int);
+
+				i += print_bin(nbr);
+
+			}
 		}
 		format++;
 	}

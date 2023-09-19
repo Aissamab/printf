@@ -54,3 +54,32 @@ int print_int(int num)
 		count++;
 	return (count);
 }
+/**
+ * print_bin - prints binary numbers
+ * @num: the integer to print
+ * Return: number of characters
+*/
+int print_bin(int num)
+{
+	int binNum[32];
+        int i = 0;
+        int j;
+
+	if (num == 0)
+	{
+		printf("0");
+		return(0);
+	}
+
+	for ( ; num > 0; )
+	{
+		binNum[i++] = num % 2;
+		num /= 2;
+	}
+
+	for (j = i - 1; j >= 0; j--)
+		printf("%d", binNum[j]);
+
+
+	return (j);
+}
