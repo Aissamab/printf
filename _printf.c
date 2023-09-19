@@ -21,21 +21,21 @@ int _printf(const char *format, ...)
 
 	while (*format)
 	{
-		if (*format != '%')
+		if (*format != '%')/*if format is not % sign*/
 		{
 			_putchar(*format);
 			i++;
 		}
 		else
 		{
-			format++;
+			format++;/*check the next character*/
 
 			if (*format == '\0')
 				break;
 
-			if (*format == 'c')
+			if (*format == 'c')/* handle '%c' char */
 			{
-				char c = (char)va_arg(list, int);
+				char c = va_arg(list, int);
 
 				_putchar(c);
 				i++;
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 
 				i += print_string(str);
 			}
-			else if (*format == '%')
+			else if (*format == '%')/*for % */
 			{
 				_putchar('%');
 				i++;
